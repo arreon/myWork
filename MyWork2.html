@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<style>
+    html {
+    background-image: url(https://images.pexels.com/photos/1139556/pexels-photo-1139556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-width: 1700px;
+    height: 1500px;
+  }
+  *{
+  box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+
+body{
+    line-height:1.7;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    background-color: #271f78;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 600px;
+    margin: auto;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.9;
+}
+#title {
+    text-align: center;
+    font-family: "Arial";
+    font-size: 35px;
+    color: #fff;
+  }
+  #description {
+    text-align: center;
+    font-family: "Arial";
+    font-size: 20px;
+    color: #fff;
+  }
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  input[type=text]:focus {
+    border:3px solid #555
+  }
+  input[type=radio] {
+  }
+  input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  }
+
+  input[type=submit]:hover {
+  background-color: #45a049;
+  }
+  #comment {
+    width: 100%;
+    margin-top: 6px;
+    height: 150px
+    resize: vertical;
+  }
+  #kek {
+    font-family: "Arial";
+    font-size: 20px;
+    color: #fff;
+  }
+  @media screen and (max-width: 600px) {
+  label, input [type=text], input[type=submit], select, input[type="email"], input[type=number] , textarea, #kek {
+    width: 100%;
+    margin-top: 0;
+  }
+</style>
+<head>
+  <h1 id="title">freeCodeCamp Survey Form</h1>
+  <p id="description"><i>Thank you for taking the time to help us impruve the platform</i></p>
+</head>
+<body id="main">
+  <div>
+  <form id="survey-form">
+    <label class="labels" id="name-label">Name</label>
+    <div class="inputs">
+      <input id="name" type="text" name="name" placeholder="Enter Your Name" required>
+    </div>
+    <label class="labels" id="email-label">Email</label>
+    <div class="inputs">
+      <input id="email" type="email" placeholder="Enter Your Email" required>
+    </div>
+
+    <label class="labels" id="number-label">Age</label>
+    <div class="inputs">
+      <input id="number"  required min="12" max="100" type="number" placeholder="Enter Your Age">
+    </div>
+    <label class="labels">Which option best describes your current role?</label>
+    <div class="inputs">
+
+      <select id="dropdown" type="dropdown">
+         <option disabled selected value>Select an option</option> <option id="student">Student</option>
+        <option id="full-job">Full Time Job</option>
+         <option id="full-learner">Full Time learner</option>
+         <option id="not-say">Prefer Not To Say</option>
+
+      </select>
+    </div>
+    <label>Would you recommend freeCodeCamp to a friend?</label><br>
+    <input type="radio" id="definitely" name="recommend"  value="1" checked />
+    <label for="louie">Definitely</label><br>
+    <input type="radio" value="2" class="inputs" id="maybe" name="recommend" />
+    <label for="maybe">Maybe</label><br>
+    <input class="inputs" value="3" type="radio" id="not sure" name="recommend" />
+    <label for="not sure">Not Sure</label><br>
+
+    <div class="labels">
+      <label>What do you like most in FCC</label>
+      <select type="dropdown">
+         <option disabled selected class="inputs" value>Select an option</option>
+  <option class="inputs">Challenges</option>
+        <option class="inputs">Projects</option>
+        <option class="inputs">Open Source</option>
+        <option class="inputs">Community</option>
+
+      </select>
+       </div>
+    <div class="labels">
+      <label>What would you like to see improved? (all that apply)</label>
+      <div class="inputs">
+      <input type="checkbox" id="front" name="front" value="1">
+      <label for="front">Front-end Projects</label><br>
+      <input type="checkbox" id="back" name="back" value="2">
+      <label for="back">Back-end Project</label><br>
+      <input type="checkbox" id="data" name="data" value="3">
+      <label for="data">Data Visualization</label><br>
+      <input type="checkbox" id="chall" name="chall" value="4">
+      <label for="chall">Challenges</label><br>
+      <input type="checkbox" id="open" name="open" value="5">
+      <label for="open">Open Source Community</label><br>
+      <input type="checkbox" id="gitter" name="gitter" value="6">
+      <label for="gitter">Gitter help rooms</label><br>
+      <input type="checkbox" id="videos" name="videos" value="7">
+      <label for="videos">Videos</label><br>
+      <input type="checkbox" id="city" name="city" value="8">
+      <label for="city">City Meetups</label><br>
+      <input type="checkbox" id="wiki" name="wiki" value="9">
+      <label for="wiki">Wiki</label><br>
+      <input type="checkbox" id="forum" name="forum" value="10">
+      <label for="forum">Forum</label><br>
+      <input type="checkbox" id="addit" name="addit" value="11">
+      <label for="addit">Additional Courses</label><br><br>
+
+  <label for="comment">Any comments or suggestions?</label>
+    <textarea id="comment" name="comment" placeholder="Enter your comment here..."></textarea><br><br>
+
+    <input id="submit" type="submit" value="Submit">
+
+  </form>
+</div>
+</body>
